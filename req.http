@@ -1,0 +1,82 @@
+### USERS correct get
+GET http://localhost:8080/Card/user?id=2
+
+### incorrect data get
+GET http://localhost:8080/Card/user?id=1r
+
+### incorrect id get
+GET http://localhost:8080/Card/user?id=5
+
+### incorrect no id get
+GET http://localhost:8080/Card/user
+
+### correct delete
+DELETE http://localhost:8080/Card/user?id=1
+
+### incorrect data delete
+DELETE http://localhost:8080/Card/user?id=1r
+
+### incorrect id delete
+DELETE http://localhost:8080/Card/user?id=6
+
+### correct post
+POST http://localhost:8080/Card/user
+content-type:application/json
+
+{
+  "id": 2,
+  "login": "bear",
+  "password": "12333",
+  "name": "Ivan",
+  "regDate": "16.04.2023 19:00:00"
+}
+
+### incorrect login post
+POST http://localhost:8080/Card/user
+content-type:application/json
+
+{
+  "id": 2,
+  "login": "bea",
+  "password": "12333",
+  "name": "Ivan",
+  "regDate": "16.04.2023 19:00:00"
+}
+
+### incorrect password post
+POST http://localhost:8080/Card/user
+content-type:application/json
+
+{
+  "id": 2,
+  "login": "bear",
+  "password": "1233",
+  "name": "Ivan",
+  "regDate": "16.04.2023 19:00:00"
+}
+
+### incorrect data post
+POST http://localhost:8080/Card/user
+content-type:application/json
+
+{
+  "id": 2r,
+  "login": "bear",
+  "password": "12333",
+  "name": "Ivan",
+  "regDate": "16.04.2023 19:00:00"
+}
+
+### CATEGORIES correct get
+GET http://localhost:8080/Card/category?id=2
+
+### correct get idUser
+GET http://localhost:8080/Card/category?idUser=2
+
+### incorrect data get
+GET http://localhost:8080/Card/category?id=2r
+
+### incorrect data get idUser
+GET http://localhost:8080/Card/category?idUser=2r
+
+###
